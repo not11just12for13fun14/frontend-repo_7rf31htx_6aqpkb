@@ -4,6 +4,7 @@ import Skills from './components/Skills'
 import Experience from './components/Experience'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
+import SplineShowcase from './components/SplineShowcase'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <About />
         <Skills />
         <Experience />
+        <SplineShowcase />
         <Projects />
         <CTA />
         <Contact />

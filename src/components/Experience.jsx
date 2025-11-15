@@ -1,3 +1,5 @@
+import SectionSplines from './SectionSplines'
+
 export default function Experience() {
   const items = [
     {
@@ -23,8 +25,12 @@ export default function Experience() {
   ]
 
   return (
-    <section id="experience" className="py-20 bg-slate-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="experience" className="relative py-20 bg-slate-50 overflow-hidden">
+      <SectionSplines items={[
+        { top: 'top-10', right: 'right-8', size: 'h-24 w-24' },
+        { bottom: 'bottom-10', left: 'left-16', size: 'h-32 w-32' },
+      ]} />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Experience</h2>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {items.map((job) => (
