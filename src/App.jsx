@@ -1,27 +1,62 @@
-import { useState } from 'react'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import Skills from './components/Skills'
+import Experience from './components/Experience'
+import Projects from './components/Projects'
+import Contact from './components/Contact'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
+    <div className="bg-white text-slate-900">
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <CTA />
+        <Contact />
+        <Footer />
+      </main>
+    </div>
+  )
+}
+
+function About() {
+  return (
+    <section id="about" className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl md:text-4xl font-bold">Professional Summary</h2>
+        <p className="mt-4 text-slate-700 max-w-3xl leading-relaxed">
+          Full-Stack Software Engineer with 2+ years of experience architecting, building, and deploying scalable applications and AI-driven solutions. Expertise in Java, Spring Boot, React.js, React Native, cloud platforms (AWS, Azure), and CI/CD pipelines (GitLab, GitHub Actions). Delivered measurable improvements — increased process efficiency by 30%, reduced deployment time by 40%, and boosted user engagement by 25%. Proficient in agile methodologies and cross-team collaboration to drive project success.
         </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+      </div>
+    </section>
+  )
+}
+
+function CTA() {
+  return (
+    <section className="py-16 bg-gradient-to-br from-indigo-600 to-fuchsia-600 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+        <h3 className="text-2xl md:text-3xl font-bold">Let’s build something impactful together.</h3>
+        <div className="flex gap-3">
+          <a href="#projects" className="px-5 py-3 rounded-lg bg-white/10 hover:bg-white/20 backdrop-blur font-semibold">See my work</a>
+          <a href="#contact" className="px-5 py-3 rounded-lg bg-white text-indigo-700 font-semibold">Hire me</a>
         </div>
       </div>
-    </div>
+    </section>
+  )
+}
+
+function Footer() {
+  return (
+    <footer className="py-10 bg-white border-t border-slate-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-slate-500">
+        © {new Date().getFullYear()} Full‑Stack Software Engineer — Java • Spring Boot • Cloud • AI
+      </div>
+    </footer>
   )
 }
 
